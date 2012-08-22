@@ -1,14 +1,18 @@
-<div class="wrapper ep193">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Asciicasts</title>
+</head>
+<body><div class="wrapper ep193">
   <h2>
     326: ActiveAttr 
-    <g:plusone size="medium"></g:plusone>
+    
   </h2>
   <p><a href="http://railscasts.com/episodes/326-activeattr">(view original Railscast)</a></p>
   
-  <p id="otherFormats">Other formats: 
-    <a href="http://s3.amazonaws.com/asciicasts_production/pdfs/577/ep326_-_ActiveAttr.pdf?1330200046"><img src="/images/pdf_logo.gif?1316800321" alt="Pdf_logo" /></a> 
-    
-  </p>
+  
   
   <p>Back in <a href="http://railscasts.com/episodes/219-active-model">episode 219</a> we used ActiveModel to create a model that isn’t backed by a database table but which still has some ActiveRecord features, such as validations. ActiveModel is great but isn’t very convenient to use directly like this. For example it takes quite a bit of code just to make a simple model that has some validation support.</p>
 
@@ -44,7 +48,7 @@ end
 <p>We’ll be working with an application which has a “Contact Us” form. When the form is filled in and submitted we want to send an email but not save the message to the database. We don’t want to use ActiveRecord at all here but we do want to use some of its features, such as validations, so that if the user fails to fill the form in correctly they see some error messages explaining what they’ve done wrong.</p>
 
 <div class="imageWrapper">
-  <img alt="The contact form." height="464" width="800" src="http://asciicasts.com/system/photos/1011/original/E326I01.png" />
+  <img alt="The contact form." height="464" width="800" src="E326I01.png" />
 </div>
 
 <p>We’ve already created the controller and view for this and they work very similarly to what we’d have if we used Rails’ scaffolding. We’ll walk through it quickly now. The <code>MessagesController</code> has <code>new</code> and <code>create</code> actions. When the new action is triggered it will create a new instance of <code>Message</code> and render out a template.</p>
@@ -139,7 +143,7 @@ end
 <p>We now have a fully-functional model that behaves like an ActiveRecord model. If we try visiting the form again and submit it without filling in any of the fields we’ll see validation errors just like we expect but the model code is quite a bit simpler.</p>
 
 <div class="imageWrapper">
-  <img alt="If the form is filled in incorrectly the validation errors will be displayed." height="561" width="800" src="http://asciicasts.com/system/photos/1012/original/E326I02.png" />
+  <img alt="If the form is filled in incorrectly the validation errors will be displayed." height="561" width="800" src="E326I02.png" />
 </div>
 
 <h3>Mass Assignment Protection</h3>
@@ -186,8 +190,5 @@ end
 <p>These options aren’t yet available but they should be coming soon so it’s worth checking ActiveAttr’s Github page so see if these features have been released.</p>
 
 <p>That’s it for this episode on ActiveAttr. It’s a great way to make table-less models. The documentation has further details of what you can do with it. We’ve used the <code>ActiveAttr::Model</code> module which includes everything but there are separate modules for its different features which can be used if you only need part of ActiveAttr’s functionality.</p>
-  <div class="episodeLinks">
-    <a href="/episodes/324-passing-data-to-javascript">Previous episode</a>
-    <a href="/episodes/328-twitter-bootstrap-basics">Next episode</a>
-  </div>
-</div>
+  
+</div></body></html>
